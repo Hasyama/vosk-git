@@ -22,16 +22,10 @@ keywords    = '[ "zero", "one", "two", "[unk]" ]'
 recognizer 	= KaldiRecognizer(model, 16000, keywords)
 
 # Start listening to the microphone
-cap = pyaudio.PyAudio()
-stream = cap.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=8192)
-stream.start_stream()
-
-# Listen audio from the microphone
 # That's pyaudio
 # open a stream on the desired device with the desired audio parameters
 capture = pyaudio.PyAudio()
 stream = capture.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=8192)
-# start listening
 stream.start_stream()
 
 while True:
