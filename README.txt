@@ -3,4 +3,4 @@ cmd /k .\Scripts\activate.bat
 :: install Pyhton packages for the project to work
 pip install requirements.txt
 :: start the code
-python microphonerecognition.py
+python microphonerecognition_keywords.py

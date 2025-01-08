@@ -1,4 +1,4 @@
-#   microphonerecognition for word zero
+#   microphonerecognition for words "zero", "one", "two"
 #
 #   https://youtu.be/SqVeAxrPAB0?t=757
 #   How to Use Vosk for Speech Recognition in Python
@@ -13,7 +13,8 @@ import pyaudio
 # Recognize speech from the microphone
 # model		= Model(r'C:\va\vosk-git\voicemodel\en-us-small') # read the model # full path
 model		= Model(r'.\voicemodel\en-us-small') # read the model # relative pat
-recognizer 	= KaldiRecognizer(model, 16000, '[ "zero", "[unk]" ]')
+keywords    = '[ "zero", "one", "two", "[unk]" ]'
+recognizer 	= KaldiRecognizer(model, 16000, keywords)
 
 # Start listening to the microphone
 cap = pyaudio.PyAudio()
